@@ -1,0 +1,119 @@
+/* עיצוב כללי לדף */
+body {
+    background-image: url('background-image.png'); /* ודא שהנתיב לתמונה נכון */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* מתחיל למעלה */
+    align-items: center;
+    color: black;
+    font-family: "Heebo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+}
+
+/* תפריט ניווט - קישורים לדף הבית ולחופשה לברלין */
+h3 {
+    position: absolute; /* מיקום מוחלט על הדף */
+    top: 0; /* ממקם את הקישורים בדיוק בחלק העליון של הדף */
+    left: 50%; /* ממקם את הקישורים באמצע */
+    transform: translateX(-50%); /* מיישר את הקישורים באופן מדויק */
+    margin-top: 0; /* לא צריך מרווח נוסף */
+    padding-top: 0; /* לא צריך רווח נוסף */
+}
+
+/* עיצוב לקישורים בתוך h3 */
+h3 a {
+    color: black;
+    text-decoration: none; /* מבטל את הקו התחתון */
+    font-weight: bold;
+    padding: 10px 15px; /* הגדלת הרווחים מסביב לטקסט */
+    border-radius: 8px; /* פינות מעוגלות */
+    margin: 0 10px; /* רווחים בין הקישורים */
+    transition: background-color 0.3s ease, color 0.3s ease; /* מעבר חלק */
+}
+
+h3 a:hover {
+    background-color: #4CAF50; /* צבע רקע כאשר ריחפים */
+    color: white; /* שינוי צבע הטקסט בעת ריחוף */
+    text-decoration: underline; /* קו תחתון בריחוף */
+}
+
+/* כותרת ראשית */
+.beautiful-header {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
+}
+
+/* מיכל תוכן מרכזי */
+.content {
+    width: 100%;
+    max-width: 800px;
+    padding: 24px;
+    margin-top: 40px; /* מרווח קטן יותר מהכותרת */
+}
+
+/* עיצוב עבור פרטי קשר */
+.contact-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+/* עיצוב עבור רשימה של פרטי קשר */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 21.6px;
+    color: #555;
+    margin: 12px 0;
+}
+
+/* עיצוב עבור לינקים חברתיים */
+.social-links {
+    margin-top: 36px;
+}
+
+.social-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.social-links li a {
+    color: #4CAF50;
+}
+
+.social-links li a:hover {
+    color: #45a049;
+}
+
+/* הגדרות פונטים מיוחדות ל-Heebo */
+.heebo-unique-class { /* <uniquifier> */
+    font-family: "Heebo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* <weight> */
+    font-style: normal;
+}

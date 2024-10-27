@@ -1,0 +1,150 @@
+/* עיצוב בסיסי */
+body {
+  background-image: url('background-image.png'); /* תמונת רקע */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 64.0vh; /* גובה המסך */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  direction: rtl;
+}
+
+h1 {
+  font-size: 2.2em; /* הקטנה ב-4% (2.5em * 0.96) */
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  letter-spacing: 1.282px;
+  text-shadow: 1.282px 1.282px 2.565px rgba(0, 0, 0, 0.2);
+  margin-top: 19.23px;
+}
+
+h3 {
+  font-size: 1.1em; /* הקטנה ב-4% (1.15em * 0.96) */
+}
+
+h3 a {
+  color: black;
+  text-decoration: none;
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4em; /* הקטנה ב-7% (1.5em * 0.93) */
+}
+
+h3 a:hover {
+  text-decoration: underline;
+}
+
+/* עיצוב התמונות */
+img {
+  width: 16vw;  /* גודל התמונות, הקטנה ב-20% */
+  height: 16vw; /* גובה אחיד של התמונות, מרובע */
+  object-fit: cover;  /* שמירה על פרופורציות */
+  margin: 10px; /* מרווח בין התמונות */
+  border-radius: 8px;  /* פינות מעוגלות */
+  box-shadow: 0 2.56px 5.121px rgba(0, 0, 0, 0.2); /* צללית רכה */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, margin 0.3s ease; /* מעבר חלק */
+  cursor: pointer; /* מצביע מעל התמונה */
+}
+
+/* אפקט ריחוף על התמונות - הגדלה */
+img:hover {
+  transform: scale(1.5); /* הגדלת התמונה */
+  box-shadow: 0 7.6815px 15.363px rgba(0, 0, 0, 0.4); /* צללית חזקה יותר */
+  margin: 15px; /* הגדלת המרווח */
+}
+
+/* מיכל התמונות */
+.image-container {
+  display: flex;
+  justify-content: flex-start; /* התמונות יהיו מיושרות מצד שמאל */
+  width: 100%; /* רוחב המיכל 100% */
+  margin-top: 20px;
+  gap: 14.5vw; /* הגדלת המרווח בין התמונות ב-10% */
+}
+
+/* צד ימין - תמונות 1, 2, 6 */
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* ממקם את התמונות בצד ימין */
+  width: 30%; /* רוחב התמונות ימינה */
+  gap: 20px;
+  margin-left: 35%; /* הזזה של התמונות ימינה ב-35% */
+  margin-top: -5%;
+}
+
+/* צד שמאל - תמונות 3, 4, 5 */
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ממקם את התמונות בצד שמאל */
+  width: 30%; /* רוחב אחיד גם בצד שמאל */
+  gap: 20px;
+  transform: translateY(-10%); /* הזזה למעלה ב-10% */
+}
+
+/* סגנון טקסט באמצע הדף */
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* ממקם את הטקסט במרכז הדף */
+  color: black;
+  font-size: 1.55em; /* הקטנה ב-6% (1.65em * 0.94) */
+  text-align: center; 
+  z-index: 1; /* מוודא שהטקסט יהיה מעל לתמונות */
+  font-family: "Heebo", sans-serif;
+  width: 40%; /* רוחב הטקסט יחסית לדף */
+  text-shadow: 1.282px 1.282px 3.2px rgba(0, 0, 0, 0.3); /* צללית לטקסט */
+}
+
+/* קישורים לפוטר */
+footer h3 {
+  font-size: 1.4em; /* הקטנה ב-7% (1.5em * 0.93) */
+  position: absolute;
+  bottom: 20px; /* ממקם את הקישורים בחלק התחתון של הדף */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
+  padding-top: 0;
+}
+
+footer h3 a {
+  color: black;
+  text-decoration: none;
+  font-family: "Heebo", sans-serif;
+  font-size: 1.1em; /* הקטנה ב-8% (1.2em * 0.92) */
+  margin-left: 10px; /* מרווח קטן בין הקישורים */
+}
+
+footer h3 a:hover {
+  text-decoration: underline;
+}
+
+footer h3 a + a {
+  margin-left: 20px; /* הוספת מרווח בין הקישורים */
+}
+
+/* הזזת התגיות "דף הבית" ו"צרו קשר" למעלה */
+nav a,
+footer a {
+  position: relative;
+  top: -3px; /* הזזה טיפה למעלה */
+}
+
+/* הגדרת פונט Heebo עם משתנים */
+.heebo-custom {
+  font-family: "Heebo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* משקל לדוגמה, תוכל לשנות לפי הצורך */
+  font-style: normal;
+}

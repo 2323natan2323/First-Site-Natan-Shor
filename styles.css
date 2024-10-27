@@ -1,0 +1,96 @@
+/* תקן את ההגדרה של התמונה */
+img {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 50px;
+    width: 30%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* הגדרות לגוף העמוד */
+body {
+    background-image: url('background-image.png'); /* ודא שהנתיב לתמונה נכון */
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+    margin: 0;  
+    height: 100vh;  
+    display: flex; /* הוסף flexbox לעמוד */
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;  
+    color: black;
+    font-family: "Heebo", sans-serif; /* הגדרת גופן */
+    font-weight: 400;
+    font-style: normal;
+    direction: rtl; 
+    text-align: center; 
+    position: relative;
+}
+
+/* עיצוב לכותרת */
+.beautiful-header {
+    font-size: 3em; 
+    font-weight: 600; 
+    color: black; 
+    text-align: center; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);  
+    font-family: "Heebo", sans-serif; /* הגדרת גופן */
+    font-style: normal;
+}
+
+/* עיצוב לתוכן */
+.content {
+    top: 150px;
+    font-size: 25px; 
+    color: black;
+    font-family: "Heebo", sans-serif; /* הגדרת גופן */
+    font-weight: 400; /* משקל תוכן */
+}
+
+/* עיצוב לכותרת h3 עם קישורים */
+h3 {
+    font-size: 24px;
+    position: absolute; /* מיקום מוחלט */
+    top: 10px; /* ממקם את הקישורים 10px מהחלק העליון */
+    left: 50%; /* ממקם את הקישורים באמצע */
+    transform: translateX(-50%); /* מיישר את הקישורים באופן מדויק */
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* עיצוב לקישורים בתוך h3 */
+h3 a {
+    color: black;
+    text-decoration: none; /* מבטל את הקו התחתון */
+    margin-left: 10px; /* מרווח קטן בין הקישורים */
+    font-family: "Heebo", sans-serif; /* הגדרת גופן */
+}
+
+h3 a:hover {
+    text-decoration: underline; /* מוסיף קו תחתון כשעוברים עם העכבר */
+}
+
+h3 a + a {
+    margin-left: 20px; /* הוספת מרווח בין הקישורים */
+}
+
+/* הגדרות לפונטים שונים עם Heebo */
+.heebo-header {
+  font-family: "Heebo", serif;
+  font-weight: 700; /* משקל כותרת */
+}
+
+.heebo-content {
+  font-family: "Heebo", serif;
+  font-weight: 400; /* משקל תוכן */
+}
+
+.heebo-small {
+  font-family: "Heebo", serif;
+  font-weight: 300; /* משקל קל */
+}
